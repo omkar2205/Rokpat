@@ -15,6 +15,15 @@
   const cursor = document.querySelector('.cursor');
   const heroShots = [...document.querySelectorAll('.hero-shot')];
   const heroIndex = document.getElementById('hero-index');
+  const contactPrimary = document.querySelector('.contact-footer > a');
+
+  // Demo-safe public contact: use Rok's verified public Instagram until he confirms a preferred email.
+  if (contactPrimary) {
+    contactPrimary.href = 'https://www.instagram.com/rokpat.vc/';
+    contactPrimary.target = '_blank';
+    contactPrimary.rel = 'noreferrer';
+    contactPrimary.textContent = '@rokpat.vc ↗';
+  }
 
   const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 60);
   onScroll();

@@ -25,7 +25,7 @@
     mobileMenu.setAttribute('aria-hidden', 'true');
     menuButton.setAttribute('aria-expanded', 'false');
     body.classList.remove('menu-open');
-    menuButton.querySelectorAll('span').forEach(line => line.style.transform = '');
+    menuButton.querySelectorAll('span').forEach(line => { line.style.transform = ''; });
   };
 
   if (menuButton && mobileMenu) {
@@ -41,7 +41,6 @@
           : '';
       });
     });
-
     mobileLinks.forEach(link => link.addEventListener('click', closeMenu));
     window.addEventListener('resize', () => {
       if (window.innerWidth >= 768 && mobileMenu.classList.contains('is-open')) closeMenu();
@@ -89,4 +88,50 @@
   window.addEventListener('keydown', event => {
     if (event.key === 'Escape' && modal?.open) closeVideo();
   });
+
+  const filterButtons = document.querySelectorAll('[data-filter]');
+  const projects = document.querySelectorAll('.project[data-category]');
+  filterButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const filter = button.dataset.filter;
+      filterButtons.forEach(item => item.classList.toggle('is-active', item === button));
+      projects.forEach(project => {
+        const categories = (project.dataset.category || '').split(' ');
+        project.classList.toggle('is-hidden', filter !== 'all' && !categories.includes(filter));
+      });
+    });
+  });
+
+  const testimonials = [...document.querySelectorAll('.testimonial')];
+  const prev = document.querySelector('[data-testimonial-prev]');
+  const next = document.querySelector('[data-testimonial-next]');
+  let testimonialIndex = 0;
+  const showTestimonial = index => {
+    if (!testimonials.length) return;
+    testimonialIndex = (index + testimonials.length) % testimonials.length;
+    testimonials.forEach((item, i) => item.classList.toggle('is-active', i === testimonialIndex));
+  };
+  prev?.addEventListener('click', () => showTestimonial(testimonialIndex - 1));
+  next?.addEventListener('click', () => showTestimonial(testimonialIndex + 1));
+
+  const contactForm = document.getElementById('contact-form');
+  if (contactForm) {
+    contactForm.addEventListener('submit', event => {
+      event.preventDefault();
+      const formData = new FormData(contactForm);
+      const name = String(formData.get('name') || '').trim();
+      const email = String(formData.get('email') || '').trim();
+      const type = String(formData.get('projectType') || '').trim();
+      const message = String(formData.get('message') || '').trim();
+      const subject = encodeURIComponent(`Project enquiry${type ? ` - ${type}` : ''}${name ? ` - ${name}` : ''}`);
+      const bodyText = [
+        name ? `Name: ${name}` : '',
+        email ? `Email: ${email}` : '',
+        type ? `Project type: ${type}` : '',
+        '',
+        message
+      ].filter((line, index) => line || index === 3).join('\n');
+      window.location.href = `mailto:rokpat.dm@gmail.com?subject=${subject}&body=${encodeURIComponent(bodyText)}`;
+    });
+  }
 })();

@@ -17,17 +17,19 @@
     <nav class="nav" aria-label="Primary navigation">
       <a href="#work">Work</a>
       <a href="#services">Services</a>
+      <a href="#clients">Clients &amp; Collaborations</a>
+      <a href="#testimonials">Testimonials</a>
       <a href="#about">About</a>
       <a href="contact.html">Contact</a>
     </nav>
-    <button class="menu-button" type="button" aria-label="Open menu" aria-expanded="false">
-      <span></span><span></span>
-    </button>
+    <button class="menu-button" type="button" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
   </header>
 
   <div class="mobile-menu" aria-hidden="true">
     <a href="#work">Work</a>
     <a href="#services">Services</a>
+    <a href="#clients">Clients &amp; Collaborations</a>
+    <a href="#testimonials">Testimonials</a>
     <a href="#about">About</a>
     <a href="contact.html">Contact</a>
   </div>
@@ -36,97 +38,144 @@
     <section class="hero shell">
       <div class="hero-grid">
         <div class="hero-identity reveal">
-          <div>
-            <p class="location">Birmingham, UK</p>
-            <h1>ROK<br>PAT</h1>
-          </div>
-          <p class="role">CGI / FILM / DIRECTION / DESIGN</p>
+          <p class="location">Birmingham, UK</p>
+          <h1>ROK<br>PAT</h1>
+          <p class="role">CGI ARTIST / VIDEO PRODUCER / DIRECTOR</p>
         </div>
 
-        <button class="hero-card hero-main reveal" type="button" data-video="c2HpIfrBOyA" data-title="Yi Jing — Season 2">
+        <button class="hero-card hero-main reveal" type="button" data-video="c2HpIfrBOyA" data-title="Yi Jing - Season 2">
           <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_3840_webp/5ac592246228197.69bffee991458.png" alt="Yi Jing Season 2 title sequence by Rok Pat" />
-          <span class="hero-card-meta"><strong>Yi Jing — Season 2</strong><small>Title Sequence / UE5 / 2026</small></span>
+          <span class="hero-card-meta"><strong>Yi Jing - Season 2</strong><small>Title Sequence / UE5 / 2026</small></span>
           <span class="hero-play">Play</span>
         </button>
 
-        <button class="hero-card hero-side hero-side-a reveal" type="button" data-video="FqLjdEXpmxo" data-title="Emerald Seed">
+        <button class="hero-card hero-small hero-a reveal" type="button" data-video="FqLjdEXpmxo" data-title="Emerald Seed">
           <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200_webp/42f88c246227077.69bff6d96616e.jpg" alt="Emerald Seed short film by Rok Pat" />
-          <span class="hero-card-meta"><strong>Emerald Seed</strong><small>Direction / Animation / 2026</small></span>
+          <span class="hero-card-meta"><strong>Emerald Seed</strong><small>Film / 2026</small></span>
         </button>
 
-        <button class="hero-card hero-side hero-side-b reveal" type="button" data-video="7uKzViVoVRI" data-title="SUDANIM">
+        <button class="hero-card hero-small hero-b reveal" type="button" data-video="7uKzViVoVRI" data-title="SUDANIM">
           <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_3840_webp/b1664a187313013.65859e4f5539f.jpg" alt="SUDANIM CGI showcase by Rok Pat" />
           <span class="hero-card-meta"><strong>SUDANIM</strong><small>CGI / UE5 / 2023</small></span>
         </button>
-      </div>
 
-      <div class="discipline-strip" aria-label="Disciplines">
-        <span>Film</span><span>CGI / VFX</span><span>Direction</span><span>Unreal Engine</span><span>Visual Design</span>
+        <button class="hero-card hero-small hero-c reveal" type="button" data-video="lWnz9aUGY4c" data-title="Soft as Cotton Candy">
+          <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_3840_webp/501725246227417.69bff93f886c3.png" alt="Soft as Cotton Candy music video by Rok Pat" />
+          <span class="hero-card-meta"><strong>Soft as Cotton Candy</strong><small>Music Video / 2026</small></span>
+        </button>
       </div>
     </section>
 
-    <section class="work shell" id="work">
+    <section class="work shell section" id="work">
       <div class="section-head reveal">
-        <h2>Selected work</h2>
-        <a href="https://www.behance.net/rokpat" target="_blank" rel="noreferrer">Behance ↗</a>
+        <h2>Selected Work</h2>
+        <div class="work-tools">
+          <div class="filters" aria-label="Filter work">
+            <button class="filter-button is-active" type="button" data-filter="all">All</button>
+            <button class="filter-button" type="button" data-filter="film">Film</button>
+            <button class="filter-button" type="button" data-filter="cgi">CGI / VFX</button>
+            <button class="filter-button" type="button" data-filter="realtime">Realtime</button>
+          </div>
+          <a href="https://www.behance.net/rokpat" target="_blank" rel="noreferrer">Behance ↗</a>
+        </div>
       </div>
 
-      <div class="work-grid">
-        <button class="project project-a reveal" type="button" data-video="c2HpIfrBOyA" data-title="Yi Jing — Season 2">
-          <div class="project-image">
-            <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_3840_webp/5ac592246228197.69bffee991458.png" alt="Yi Jing Season 2 title sequence" loading="lazy" />
-          </div>
-          <div class="project-info"><h3>Yi Jing — Season 2</h3><span>Title Sequence / Unreal Engine 5</span><span>2026</span></div>
+      <div class="work-grid" id="work-grid">
+        <button class="project project-a reveal" type="button" data-category="cgi realtime" data-video="c2HpIfrBOyA" data-title="Yi Jing - Season 2">
+          <div class="project-image"><img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_3840_webp/5ac592246228197.69bffee991458.png" alt="Yi Jing Season 2 title sequence" loading="lazy" /></div>
+          <div class="project-info"><h3>Yi Jing - Season 2</h3><span>Title Sequence / Unreal Engine 5</span><span>2026</span></div>
         </button>
 
-        <button class="project project-b reveal" type="button" data-video="FqLjdEXpmxo" data-title="Emerald Seed">
-          <div class="project-image">
-            <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200_webp/42f88c246227077.69bff6d96616e.jpg" alt="Emerald Seed short film" loading="lazy" />
-          </div>
+        <button class="project project-b reveal" type="button" data-category="film cgi realtime" data-video="FqLjdEXpmxo" data-title="Emerald Seed">
+          <div class="project-image"><img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200_webp/42f88c246227077.69bff6d96616e.jpg" alt="Emerald Seed short film" loading="lazy" /></div>
           <div class="project-info"><h3>Emerald Seed</h3><span>Direction / Animation</span><span>2026</span></div>
         </button>
 
-        <button class="project project-c reveal" type="button" data-video="lWnz9aUGY4c" data-title="Soft as Cotton Candy">
-          <div class="project-image">
-            <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_3840_webp/501725246227417.69bff93f886c3.png" alt="Soft as Cotton Candy music video" loading="lazy" />
-          </div>
+        <button class="project project-c reveal" type="button" data-category="film cgi realtime" data-video="lWnz9aUGY4c" data-title="Soft as Cotton Candy">
+          <div class="project-image"><img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_3840_webp/501725246227417.69bff93f886c3.png" alt="Soft as Cotton Candy music video" loading="lazy" /></div>
           <div class="project-info"><h3>Soft as Cotton Candy</h3><span>Music Video / UE5</span><span>2026</span></div>
         </button>
 
-        <button class="project project-d reveal" type="button" data-video="7uKzViVoVRI" data-title="SUDANIM">
-          <div class="project-image">
-            <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_3840_webp/b1664a187313013.65859e4f5539f.jpg" alt="SUDANIM CGI showcase" loading="lazy" />
-          </div>
+        <button class="project project-d reveal" type="button" data-category="cgi realtime" data-video="7uKzViVoVRI" data-title="SUDANIM">
+          <div class="project-image"><img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_3840_webp/b1664a187313013.65859e4f5539f.jpg" alt="SUDANIM CGI showcase" loading="lazy" /></div>
           <div class="project-info"><h3>SUDANIM</h3><span>CGI / Unreal Engine 5</span><span>2023</span></div>
         </button>
 
-        <button class="project project-e reveal" type="button" data-video="ToPW_bGKfCU" data-title="Mood Swings">
-          <div class="project-image">
-            <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/af4b68115808051.6055465f1c642.jpg" alt="Mood Swings CGI music video" loading="lazy" />
-          </div>
+        <button class="project project-e reveal" type="button" data-category="film cgi" data-video="ToPW_bGKfCU" data-title="Mood Swings">
+          <div class="project-image"><img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/af4b68115808051.6055465f1c642.jpg" alt="Mood Swings CGI music video" loading="lazy" /></div>
           <div class="project-info"><h3>Mood Swings</h3><span>CGI Music Video / VFX</span><span>2021</span></div>
         </button>
       </div>
     </section>
 
-    <section class="services shell" id="services">
+    <section class="services shell section" id="services">
       <div class="section-head reveal"><h2>Services</h2></div>
       <div class="service-grid">
-        <div class="service-card reveal"><span>01</span><strong>Video Production</strong></div>
-        <div class="service-card reveal"><span>02</span><strong>Direction</strong></div>
-        <div class="service-card reveal"><span>03</span><strong>CGI / VFX</strong></div>
-        <div class="service-card reveal"><span>04</span><strong>Unreal Engine</strong></div>
-        <div class="service-card reveal"><span>05</span><strong>Visual Design</strong></div>
+        <article class="service-card reveal"><h3>Video Production</h3><p>Concept development, production, edit and delivery.</p></article>
+        <article class="service-card reveal"><h3>Direction</h3><p>Music videos, branded films and visual narratives.</p></article>
+        <article class="service-card reveal"><h3>CGI / VFX</h3><p>3D, compositing, motion and visual effects.</p></article>
+        <article class="service-card reveal"><h3>Unreal Engine</h3><p>Realtime cinematics, environments and virtual production.</p></article>
+        <article class="service-card reveal"><h3>Visual Design</h3><p>Creative direction, graphic design and visual development.</p></article>
       </div>
     </section>
 
-    <section class="about shell" id="about">
+    <section class="clients shell section" id="clients">
+      <div class="section-head reveal"><h2>Clients &amp; Collaborations</h2></div>
+      <div class="client-grid reveal">
+        <div>INKSLAB</div>
+        <div>Birmingham Open Media</div>
+        <div>SUDANIM</div>
+        <div>Fifi Rong / Yi Jing</div>
+        <div>The House of Radha</div>
+        <div>Bība / Emerald Seed</div>
+        <div>Sooski</div>
+        <div>Haximum</div>
+      </div>
+
+      <div class="collab-grid">
+        <a class="collab-feature reveal" href="https://www.instagram.com/rokpat.vc/" target="_blank" rel="noreferrer">
+          <div class="collab-image"><img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_3840_webp/81df1d187313013.65859e4f578db.jpg" alt="SUDANIM collaboration work by Rok Pat" loading="lazy" /></div>
+          <div class="collab-meta"><strong>SUDANIM</strong><span>CGI Showcase / Unreal Engine</span></div>
+        </a>
+        <a class="collab-feature reveal" href="https://www.thehouseofradha.co.uk/collaborations" target="_blank" rel="noreferrer">
+          <div class="collab-image"><img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200_webp/7bb506246227077.69bff6d964fc2.jpg" alt="Emerald Seed collaboration by Rok Pat" loading="lazy" /></div>
+          <div class="collab-meta"><strong>Creative Collaborations</strong><span>Film / Visual Design / Direction</span></div>
+        </a>
+      </div>
+    </section>
+
+    <section class="testimonials section" id="testimonials">
+      <div class="shell">
+        <div class="section-head reveal"><h2>Testimonials</h2></div>
+        <div class="testimonial-stage reveal" aria-live="polite">
+          <article class="testimonial is-active">
+            <blockquote>“It’s been great to see the results!”</blockquote>
+            <p>Birmingham Open Media, on the INKSLAB launch film</p>
+          </article>
+          <article class="testimonial">
+            <blockquote>“The lighting and dialogue throughout this film are just phenomenal.”</blockquote>
+            <p>Epic Developer Community, on Emerald Seed</p>
+          </article>
+          <article class="testimonial">
+            <blockquote>“Magnificent lighting and outstanding decorative assets!”</blockquote>
+            <p>Epic Developer Community, on SUDANIM</p>
+          </article>
+          <div class="testimonial-controls">
+            <button type="button" data-testimonial-prev aria-label="Previous testimonial">←</button>
+            <button type="button" data-testimonial-next aria-label="Next testimonial">→</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about shell section" id="about">
       <div class="about-image reveal"><img src="assets/rok-pat-portrait.webp" alt="Rok Pat" loading="lazy" /></div>
       <div class="about-panel reveal">
-        <div class="about-copy">
+        <div>
           <p class="about-kicker">About</p>
           <h2>Rok Pat</h2>
           <p>Creative based in Birmingham, UK, working across design, filmmaking, CGI and real-time production.</p>
+          <p class="about-secondary">With a background in arts and architecture, Rok combines visual storytelling, technical production and experimental media across commercial and independent work.</p>
         </div>
         <div class="about-meta">
           <a href="https://www.instagram.com/rokpat.vc/" target="_blank" rel="noreferrer">Instagram ↗</a>
@@ -141,15 +190,13 @@
       <div class="shell contact-band-inner">
         <span>Contact</span>
         <a href="mailto:rokpat.dm@gmail.com">rokpat.dm@gmail.com</a>
-        <a href="contact.html">Details ↗</a>
+        <a href="contact.html">Contact page ↗</a>
       </div>
     </section>
   </main>
 
   <footer class="footer shell">
-    <span>Rokas Patapas</span>
-    <span>Birmingham, UK</span>
-    <span id="year"></span>
+    <span>Rokas Patapas</span><span>Birmingham, UK</span><span id="year"></span>
   </footer>
 
   <dialog class="video-modal" id="video-modal">

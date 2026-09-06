@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <meta name="theme-color" content="#f4f1ea" />
   <meta name="description" content="Contact Rok Pat." />
-  <title>Contact — Rok Pat</title>
+  <title>Contact - Rok Pat</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -17,44 +17,62 @@
     <nav class="nav" aria-label="Primary navigation">
       <a href="index.html#work">Work</a>
       <a href="index.html#services">Services</a>
+      <a href="index.html#clients">Clients &amp; Collaborations</a>
+      <a href="index.html#testimonials">Testimonials</a>
       <a href="index.html#about">About</a>
       <a href="contact.html">Contact</a>
     </nav>
-    <button class="menu-button" type="button" aria-label="Open menu" aria-expanded="false">
-      <span></span><span></span>
-    </button>
+    <button class="menu-button" type="button" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
   </header>
 
   <div class="mobile-menu" aria-hidden="true">
     <a href="index.html#work">Work</a>
     <a href="index.html#services">Services</a>
+    <a href="index.html#clients">Clients &amp; Collaborations</a>
+    <a href="index.html#testimonials">Testimonials</a>
     <a href="index.html#about">About</a>
     <a href="contact.html">Contact</a>
   </div>
 
   <main class="contact-main shell">
     <h1 class="contact-title reveal">CONTACT</h1>
-    <div class="contact-details reveal">
-      <div class="contact-row">
-        <span>Email</span>
-        <a href="mailto:rokpat.dm@gmail.com">rokpat.dm@gmail.com</a>
+
+    <div class="contact-side">
+      <div class="contact-details reveal">
+        <div class="contact-row"><span>Email</span><a href="mailto:rokpat.dm@gmail.com">rokpat.dm@gmail.com</a></div>
+        <div class="contact-row"><span>Instagram</span><a href="https://www.instagram.com/rokpat.vc/" target="_blank" rel="noreferrer">@rokpat.vc ↗</a></div>
+        <div class="contact-row"><span>Behance</span><a href="https://www.behance.net/rokpat" target="_blank" rel="noreferrer">Rok Pat ↗</a></div>
+        <div class="contact-row"><span>YouTube</span><a href="https://www.youtube.com/c/RokPat" target="_blank" rel="noreferrer">Rok Pat ↗</a></div>
+        <div class="contact-row"><span>Based</span><p>Birmingham, UK</p></div>
       </div>
-      <div class="contact-row">
-        <span>Instagram</span>
-        <a href="https://www.instagram.com/rokpat.vc/" target="_blank" rel="noreferrer">@rokpat.vc ↗</a>
-      </div>
-      <div class="contact-row">
-        <span>Behance</span>
-        <a href="https://www.behance.net/rokpat" target="_blank" rel="noreferrer">Rok Pat ↗</a>
-      </div>
-      <div class="contact-row">
-        <span>YouTube</span>
-        <a href="https://www.youtube.com/c/RokPat" target="_blank" rel="noreferrer">Rok Pat ↗</a>
-      </div>
-      <div class="contact-row">
-        <span>Based</span>
-        <p>Birmingham, UK</p>
-      </div>
+
+      <form class="contact-form reveal" id="contact-form">
+        <div class="form-field">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" autocomplete="name" required />
+        </div>
+        <div class="form-field">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" autocomplete="email" required />
+        </div>
+        <div class="form-field full">
+          <label for="project-type">Project type</label>
+          <select id="project-type" name="projectType">
+            <option value="">Select</option>
+            <option>Video Production</option>
+            <option>Direction</option>
+            <option>CGI / VFX</option>
+            <option>Unreal Engine</option>
+            <option>Visual Design</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-field full">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" required></textarea>
+        </div>
+        <button class="form-submit" type="submit">Send enquiry</button>
+      </form>
     </div>
   </main>
 
